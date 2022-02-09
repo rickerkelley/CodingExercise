@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<script src="js/site.js" asp-append-version="true"></script>
+<script type="text/javascript">getItems();</script>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Investment Performance</title>
+    <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+    <h1>Investment Performance</h1>
+    <h3>Get a list of current investments by UserID</h3>
+    <form action="javascript:void(0);" onsubmit="showUserTransactions()">
+        <input id="transactionID" type="text" placeholder="Enter User ID">
+        <input type="submit" value="Get">
+    </form>
+    <table id="TransactionTable" hidden = "hidden">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody></tbody>       
+    </table>
+    <h3>Get a list of investment details by the UserID</h3>
+    <form action="javascript:void(0);" onsubmit="showUserInvestmentDetails()">
+        <input id="detailID" type="text" placeholder="Enter User ID">
+        <input type="submit" value="Get">
+    </form>
+    <table id="DetailsTable" hidden = "hidden">
+        <thead>
+            <tr>
+                <th>Cost Basis</th>
+                <th>Current Value</th>
+                <th>Current Price</th>
+                <th>Term</th>
+                <th>Total gain or loss</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</body>
+
+</html>
